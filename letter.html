@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Letter to You</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(to bottom right, #d8b4f8, #add8e6);
+      font-family: 'Indie Flower', cursive;
+      color: #4b3b73;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #7a3e9d;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+    }
+
+    .letter-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      margin: 0 auto 60px auto; /* space below letter */
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      font-size: 1.4em;
+      line-height: 1.8;
+    }
+
+    button {
+      background-color: #7a3e9d;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    audio {
+      display: none;
+    }
+            /* ✨ Sparkles */
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fff;
+      animation: sparkle 4s infinite ease-in-out;
+      z-index: 1;
+      opacity: 0.6;
+    }
+
+    @keyframes sparkle {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-30px) scale(1.8);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Autoplay background music -->
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Title -->
+  <h1>To My Dearest Best Friend 💌</h1>
+
+  <!-- Photo -->
+  <img src="letter-photo.jpeg" alt="Our Memory Photo">
+     <img src="letter-photo2.jpeg" alt="Our Memory Photo">
+     <img src="letter-photo3.jpeg" alt="Our Memory Photo">
+
+  <!-- Letter -->
+  <div class="letter-box">
+    Dear My black cat, Munirah💙,  
+    <br><br>
+   It’s hard to believe we’re walking separate paths now. After more than five years of being side by side — through laughter, tears, silly fights, and quiet support — it feels strange not to have you next to me every day.<br>
+
+You’ve always been the one who stayed when things got heavy. The one who knew when I was pretending to smile. The one who never left.<br>
+
+And now, though university has pulled us apart, not a day goes by that I don’t think of you. A song, a photo, or a random memory brings you right back to me — and I smile, but my chest feels tight too.<br>
+
+You’re not someone who cries easily, I know. But I hope this letter touches that soft part of your heart — the part only real friendship can reach.<br>
+
+Thank you for being my safe place all these years. And even though we’re apart, I hope you always remember: I’m still here. Always.<br>
+
+With love,<br>
+Farah, Your Orange Cat💜
+  </div>
+
+  <!-- Button to Third Page -->
+  <a href="video.html">
+    <button>Watch Our Video ▶️</button>
+  </a>
+ <!-- ✨ Sparkles -->
+  <script>
+    function createSparkle() {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.top = Math.random() * 100 + "vh";
+      sparkle.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 4000);
+    }
+    setInterval(createSparkle, 150);
+  </script>
+</body>
+</html>
